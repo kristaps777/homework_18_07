@@ -7,12 +7,81 @@
             content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible"
             content="ie=edge">
+
+        <!-- unknown error fix #1 -->
+        <link rel="shortcut icon"
+            href="#">
+
+        <!-- CSS -->
         <link rel="stylesheet"
             href="style.css">
+
         <title>CSS Grid training</title>
     </head>
 
     <body>
+
+        <!-- figure for fixed background + black underlay to avoid white flash -->
+        <figure>
+            <div class="black"></div>
+            <div id="fixed"></div>
+        </figure>
+
+        <!-- outside wrapper with margins-->
+        <div class="wrapper">
+
+            <!-- main grid container for layout-->
+            <div class="grid_container">
+
+                <!-- header section -->
+                <header id="header">
+                    <div class="header_top">
+                        <div class="logo"> <img src="img/logo.png"
+                                alt="company logo lightning bolt"></div>
+                    </div>
+                    <nav class="header_left">
+                        <ul class="navigation_list">
+                            <li><a href="#hero">hero</a></li>
+                            <li><a href="#main">main</a></li>
+                            <li><a href="#aside">aside</a></li>
+                            <li><a href="#contacts">contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header_right">
+                        <button type="button">click me</button>
+                    </div>
+                </header>
+
+                <!-- hero section -->
+                <div id="hero"
+                    class="hero">
+                    <div class="hero_1">hero_1</div>
+                    <div class="hero_2">hero_2</div>
+                </div>
+
+                <!-- disposable advert for desktop only -->
+                <div class="advert_desktop">advert</div>
+
+                <!-- main section with additional advert for mobile only -->
+                <main id="main">
+                    <article>article feature</article>
+                    <div class="advert_mobile">advert mobile</div>
+                    <ul class="article_list">
+                        <li>pl</li>
+                        <li>pl</li>
+                        <li>pl</li>
+                    </ul>
+                </main>
+
+                <!-- sidebar section -->
+                <aside id="aside">aside</aside>
+
+                <!-- footer section -->
+                <footer id="contacts">footer</footer>
+
+            </div>
+
+        </div>
 
     </body>
 
