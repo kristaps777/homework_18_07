@@ -8,6 +8,16 @@
         <meta http-equiv="X-UA-Compatible"
             content="ie=edge">
 
+        <!-- Google font link -->
+        <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome link -->
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous">
+
         <!-- unknown error fix #1 -->
         <link rel="shortcut icon"
             href="#">
@@ -15,6 +25,10 @@
         <!-- CSS -->
         <link rel="stylesheet"
             href="style.css">
+
+        <!-- CSS for social hover -->
+        <link rel="stylesheet"
+            href="social.css">
 
         <title>CSS Grid training</title>
     </head>
@@ -43,8 +57,8 @@
                         <ul class="navigation_list">
                             <li><a href="#hero">hero</a></li>
                             <li><a href="#main">main</a></li>
-                            <li><a href="#aside">aside</a></li>
-                            <li><a href="#contacts">contacts</a></li>
+                            <li id="aside_dispose_mobile"><a href="#aside">aside</a></li>
+                            <li><a href="#contacts">social</a></li>
                         </ul>
                     </nav>
                     <div class="header_right">
@@ -54,30 +68,108 @@
 
                 <!-- hero section -->
                 <div id="hero"
-                    class="hero">
-                    <div class="hero_1">hero_1</div>
-                    <div class="hero_2">hero_2</div>
+                    class="hero shadow">
+                    <div class="hero_overlay"></div>
+                    <div class="hero_1">
+                        <h3>class...</h3>
+                        <h3>speed...</h3>
+                        <h3>reliability...</h3>
+                    </div>
+                    <div class="hero_2">
+                        <button type="button">Purchase</button>
+                    </div>
                 </div>
 
                 <!-- disposable advert for desktop only -->
-                <div class="advert_desktop">advert</div>
+                <div class="advert_desktop shadow"></div>
 
                 <!-- main section with additional advert for mobile only -->
                 <main id="main">
-                    <article>article feature</article>
-                    <div class="advert_mobile">advert mobile</div>
-                    <ul class="article_list">
-                        <li>pl</li>
-                        <li>pl</li>
-                        <li>pl</li>
-                    </ul>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maiores cum corrupti possimus
+                            blanditiis quaerat eligendi, non perferendis nesciunt, omnis accusantium, officia suscipit
+                            excepturi asperiores eos placeat. Corrupti, omnis vero.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ab assumenda, quaerat
+                            commodi,
+                            nulla mollitia repellendus illo, eos sint autem numquam laborum beatae maxime dolorem nam ad
+                            corporis quae rem?</p>
+                    </article>
+
+                    <div class="advert_mobile shadow"></div>
+
+                    <div class="article_list">
+                        <p>Check out our sponsors:</p>
+                        <ul>
+                            <li><a href="https://www.promarperformanceengines.com/">Promar</a></li>
+                            <li><a href="https://www.michelinman.com/">Michelin</a></li>
+                            <li><a href="https://www.castrol.com/">Castrol</a></li>
+                            <li><a href="https://www.redbull.com">Red Bull</a></li>
+                        </ul>
+                    </div>
+
                 </main>
 
                 <!-- sidebar section -->
                 <aside id="aside">aside</aside>
 
                 <!-- footer section -->
-                <footer id="contacts">footer</footer>
+                <footer id="contacts">
+
+                    <div class="social">
+                        <div class="social-text">
+                            <h3>Follow us on social media</h3>
+                        </div>
+                        <ul>
+                            <li><a href="https://www.facebook.com/"
+                                    target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><i class="fab fa-facebook fa-xs"
+                                            aria-hidden="true"></i></span>
+                                </a></li>
+                            <li><a href="https://twitter.com/?lang=en"
+                                    target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><i class="fab fa-twitter fa-xs"
+                                            aria-hidden="true"></i></span>
+                                </a></li>
+                            <li><a href="https://aboutme.google.com/u/0/?referer=gplus"
+                                    target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><i class="fab fa-google-plus-g fa-xs"
+                                            aria-hidden="true"></i></span>
+                                </a></li>
+                            <li><a href="https://www.instagram.com/"
+                                    target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><i class="fab fa-instagram fa-xs"
+                                            aria-hidden="true"></i></span>
+                                </a></li>
+                            <li><a href="https://www.youtube.com/?gl=LV&hl=lv"
+                                    target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><i class="fab fa-youtube fa-xs"
+                                            aria-hidden="true"></i></span>
+                                </a></li>
+                        </ul>
+
+                    </div>
+
+                </footer>
 
             </div>
 
