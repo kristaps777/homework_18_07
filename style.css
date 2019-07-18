@@ -35,7 +35,6 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center center;
-    -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: transform;
     z-index: -1;
@@ -262,6 +261,10 @@ article {
     margin-bottom: 20px;
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
 .article_list {
     grid-area: article_list;
     display: flex;
@@ -309,8 +312,7 @@ footer {
 
 /* box shadow class */
 .shadow {
-    -webkit-box-shadow: 0px 0px 10px 7px rgba(48,48,48,0.8); 
-box-shadow: 0px 0px 10px 7px rgba(48,48,48,0.8);
+    box-shadow: 0px 0px 10px 7px rgba(48,48,48,0.8);
 }
 
 /* media queries */
