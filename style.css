@@ -52,8 +52,6 @@ body {
     height: 100%;
     z-index: -10;
     background: url('img/background.jpg') no-repeat center center;
-    transform: translateZ(0);
-    will-change: transform;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
