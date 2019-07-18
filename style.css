@@ -42,7 +42,7 @@ body {
     z-index: -1;
   } */
 
-  /* test for mobile background fix */
+  /* test for mobile background fix (working with addition of --webkit-fill-available and height: 10vh)*/
   body:before {
     content: "";
     display: block;
@@ -211,7 +211,7 @@ header {
 .advert_desktop {
     grid-area: advert_desktop;
     display: none;
-    background: url('img/dominos.jpg');
+    background: url('img/banner_1.jpg');
     background-size: contain;
     background-position: center;
     animation: animate_desktop 5s linear infinite;
@@ -234,10 +234,9 @@ header {
 /* advert for mobile version */
 .advert_mobile {
     grid-area: advert_mobile;
-    background: url('img/dominos.jpg');
+    background: url('img/banner_1.jpg');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
     height: 100px;
     margin-bottom: 20px;
     animation: animate_mobile 3s linear infinite;
