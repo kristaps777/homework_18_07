@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Cinzel', serif;
     height: 100%;
 }
 
@@ -26,6 +26,7 @@ body {
     z-index: -12;
 }
 
+/* previously used fixed background, disabled, because causes jitter on mobile */
 /* #fixed {
     background-image: url('img/background.jpg');
     position: fixed;
@@ -42,12 +43,12 @@ body {
     z-index: -1;
   } */
 
-  /* test for mobile background fix (working with addition of --webkit-fill-available and height: 10vh)*/
+  /* test for mobile fixed background jitter fix (working with addition of --webkit-fill-available and height: 10vh)*/
   body:before {
     content: "";
     display: block;
     position: fixed;
-    opacity: .5;
+    opacity: .3;
     left: 0;
     top: 0;
     width: 100%;
@@ -119,6 +120,31 @@ header {
     justify-content: center;
 }
 
+.header_right ul {
+    display: flex;
+    justify-content: center;
+}
+
+.header_right ul li:first-child {
+    margin-right: 20px;
+    cursor: pointer;
+    color: 	#B22222;
+}
+
+.header_right ul li:first-child:hover {
+    color: white;
+}
+
+.header_right ul li:nth-child(3) {
+    margin-left: 20px;
+    cursor: pointer;
+    color: 	#B22222;
+}
+
+.header_right ul li:nth-child(3):hover {
+    color: white;
+}
+
 .navigation_list {
     display: flex;
     text-transform: uppercase;
@@ -157,9 +183,9 @@ header {
     grid-template-rows: auto;
     grid-template-areas:
     "hero_2";
-    background: url('img/hero.jpg');
-    background-size: cover;
+    background-image: url('img/hero.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
     position: relative;
@@ -212,8 +238,9 @@ header {
     grid-area: advert_desktop;
     display: none;
     background: url('img/banner_1.jpg');
-    background-size: contain;
     background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
     animation: animate_desktop 5s linear infinite;
 }
 
@@ -235,8 +262,8 @@ header {
 .advert_mobile {
     grid-area: advert_mobile;
     background: url('img/banner_1.jpg');
-    background-size: contain;
     background-position: center;
+    background-size: contain;
     height: 100px;
     margin-bottom: 20px;
     animation: animate_mobile 3s linear infinite;
@@ -305,22 +332,34 @@ h1 {
     margin-bottom: 10px;
 }
 
-.article_list a {
-    color:#B22222;
-    display: block;
-    line-height: 20px;
-}
-
-.article_list a:hover {
-    color:white;
-    font-size: 1.5em;
-    transition: ease-in .3s;
-}
-
+/* side content styles */
 aside {
     grid-area: aside;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     display: none;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+}
+
+aside ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.aside_content_images {
+    width: 200px;
+    height: auto;
+    display: flex;
+    margin-right: 10px;
+}
+
+.aside_content_images img {
+    width: 100%;
+    height: auto;
 }
 
 /* footer styles */
@@ -333,6 +372,19 @@ footer {
 /* box shadow class */
 .shadow {
     box-shadow: 0px 0px 10px 7px rgba(48,48,48,0.8);
+}
+
+/* reusable hover classes for links*/
+.hover_link a {
+    color:#B22222;
+    display: block;
+    line-height: 20px;
+}
+
+.hover_link a:hover {
+    color:white;
+    font-size: 1.2em;
+    transition: ease-in .3s;
 }
 
 /* media queries */
@@ -349,7 +401,7 @@ footer {
 
     header {
         grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto 1fr 1fr;
         grid-template-areas:
         "header_top header_left header_right";
     }
@@ -377,8 +429,30 @@ footer {
         "article_list article_list";
     }
 
+    .advert_mobile {
+        margin-bottom: 0;
+    }
+
     aside {
-        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    aside ul {
+        flex-direction: row;
+    }
+
+    aside ul li {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    aside ul li:first-child {
+        margin-right: 40px;
+    }
+
+    .aside_content_images {
+        margin-right: 0;
     }
 
     #aside_dispose_mobile {
