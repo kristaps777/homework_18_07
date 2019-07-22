@@ -126,7 +126,7 @@ header {
 }
 
 .header_right ul li:first-child {
-    margin-right: 20px;
+    margin-right: 10px;
     cursor: pointer;
     color: 	#B22222;
 }
@@ -136,7 +136,7 @@ header {
 }
 
 .header_right ul li:nth-child(3) {
-    margin-left: 20px;
+    margin-left: 10px;
     cursor: pointer;
     color: 	#B22222;
 }
